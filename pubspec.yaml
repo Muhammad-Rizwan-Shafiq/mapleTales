@@ -1,0 +1,34 @@
+name: talepreview
+description: Take home challenge - Mobile Developer
+
+publish_to: 'none'
+
+version: 0.0.1+1
+
+environment:
+  sdk: '>=3.0.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_bloc: ^8.1.3          # Flutter BLoC Library
+  auto_route: ^7.2.0            # Auto_Route router
+  easy_localization: ^3.0.2     # Translations
+  flutter_lints: ^2.0.0         # Linting
+  dotted_border: ^2.0.0+3       # Dotted Border
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  auto_route_generator: ^7.1.1  # Auto_Route generator
+  build_runner: ^2.4.4          # Build Runner
+  json_serializable: ^6.7.0     # Json serializable
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/translations/
+    - assets/lorem-ipsum.txt
