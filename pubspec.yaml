@@ -17,6 +17,9 @@ dependencies:
   easy_localization: ^3.0.2     # Translations
   flutter_lints: ^2.0.0         # Linting
   dotted_border: ^2.0.0+3       # Dotted Border
+  fluttertoast: ^8.2.2          #toast messages
+  flutter_screenutil: ^5.8.4    #Responsiveness
+  http: ^1.0.0                  #network Request
 
 dev_dependencies:
   flutter_test:
@@ -32,3 +35,9 @@ flutter:
   assets:
     - assets/translations/
     - assets/lorem-ipsum.txt
+
+
+  fonts:
+    - family: OpenDyslexic-Regular
+      fonts:
+        - asset: assets/fonts/OpenDyslexic-Regular.otf
