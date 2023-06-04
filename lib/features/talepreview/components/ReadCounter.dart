@@ -3,16 +3,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:talepreview/res/colors/app_color.dart';
 
 import '../../../utils/text_style_utils.dart';
+import '../bloc/TalePreviewBloc.dart';
 
 class ReadCounter extends StatefulWidget {
-  const ReadCounter({super.key});
-
+  const ReadCounter({super.key, required this.counter});
+  final int counter;
   @override
   State<StatefulWidget> createState() => ReadCounterState();
 }
 
 class ReadCounterState extends State<ReadCounter> {
-  int counter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class ReadCounterState extends State<ReadCounter> {
         borderRadius: BorderRadius.circular(10.r),
       ),
       child: Text(
-        'You have read $counter Books!',
+        'Sie haben ${widget.counter} Bücher gelesen!',
         style: TextStyleUtils.body,
       ),
     );

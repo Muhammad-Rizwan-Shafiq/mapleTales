@@ -1,36 +1,23 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
-class LoremIpsumText extends StatefulWidget {
-  const LoremIpsumText({super.key});
+import '../../../utils/text_style_utils.dart';
 
-  @override
-  State<StatefulWidget> createState() => LoremIpsumTextState();
-}
 
-class LoremIpsumTextState extends State<LoremIpsumText> {
-  String? _loremIpsum;
+class LoremIpsumText extends StatelessWidget {
+  const LoremIpsumText({Key? key,this.title,this.subTitle}) : super(key: key);
 
-  @override
-  void initState() {
-    super.initState();
-    _loadLoremIpsum().then((value) => _loremIpsum = value);
-  }
+  final String? title,subTitle ;
 
   @override
   Widget build(BuildContext context) {
-    return (_loremIpsum == null)
-        ? const CircularProgressIndicator()
-        // TODO: Replace font with OpenDyslexic-Regular
-        : Text(
-            _loremIpsum ?? 'Not Found',
-            style: const TextStyle(fontSize: 20),
-            textAlign: TextAlign.justify,
-        );
-  }
+    return Column(
 
-  Future<String> _loadLoremIpsum() async {
-    return await rootBundle.loadString('assets/lorem-ipsum.txt');
+      children: [
+        Text("${title}",style: TextStyleUtils.heading,textAlign: TextAlign.center,),
+        SizedBox(height: 20,),
+        Text("${subTitle}",style: TextStyleUtils.body,),
+
+      ],
+    );
   }
 }

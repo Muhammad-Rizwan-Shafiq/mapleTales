@@ -16,5 +16,21 @@ class TextStyleUtils {
     // Add any other desired text style properties
   );
 
+  static TextStyle cardHeading = TextStyle(
+      fontSize: 13.sp,
+      fontFamily: AppFonts.openDyslexicRegular,
+    fontWeight: FontWeight.w700,
+    // Add any other desired text style properties
+  );
+
+  static TextStyle buttonText = TextStyle(
+    fontSize: 16.sp,
+    fontFamily: AppFonts.openDyslexicRegular,
+    fontWeight: FontWeight.w700,
+    // Add any other desired text style properties
+  );
+
+
+
 // Define more text styles as needed
 }

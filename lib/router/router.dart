@@ -1,5 +1,9 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:talepreview/features/talepreview/bloc/TalePreviewBloc.dart';
+import '../features/tale/TaleScreen.dart';
 import '../features/talepreview/TalePreviewScreen.dart';
+import '../features/talepreview/models/TalePreview.dart';
 
 part 'router.gr.dart';
 
@@ -11,6 +15,11 @@ class AppRouter extends _$AppRouter {
       path: '/talepreviews',
       page: TalePreviewRoute.page,
       initial: true,
+    ),
+    AutoRoute(
+      path: '/talepreviewdescription',
+      page: TalePreviewDescriptionRoute.page,
+      initial: false,
     )
   ];
 }

@@ -1,7 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:talepreview/router/router.dart';
 
 void main() async {
@@ -16,9 +18,10 @@ void main() async {
 
   runApp(
       EasyLocalization(
-          supportedLocales: const [Locale('en'), Locale('de')],
+
+          supportedLocales: [Locale('en'), Locale('de')],
           path: 'assets/translations',
-          fallbackLocale: const Locale('de'),
+          fallbackLocale: Locale('en'),
           child: Main()
       )
   );

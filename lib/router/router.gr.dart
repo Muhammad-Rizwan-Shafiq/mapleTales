@@ -15,13 +15,68 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    TalePreviewDescriptionRoute.name: (routeData) {
+      final args = routeData.argsAs<TalePreviewDescriptionRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: TaleScreen(
+          key: args.key,
+          talePreview: args.talePreview,
+          totalReads: args.totalReads,
+        ),
+      );
+    },
     TalePreviewRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const TalePreviewScreen(),
       );
-    }
+    },
   };
+}
+
+/// generated route for
+/// [TaleScreen]
+class TalePreviewDescriptionRoute
+    extends PageRouteInfo<TalePreviewDescriptionRouteArgs> {
+  TalePreviewDescriptionRoute({
+    Key? key,
+    required TalePreview talePreview,
+    required int totalReads,
+    List<PageRouteInfo>? children,
+  }) : super(
+          TalePreviewDescriptionRoute.name,
+          args: TalePreviewDescriptionRouteArgs(
+            key: key,
+            talePreview: talePreview,
+            totalReads: totalReads,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'TalePreviewDescriptionRoute';
+
+  static const PageInfo<TalePreviewDescriptionRouteArgs> page =
+      PageInfo<TalePreviewDescriptionRouteArgs>(name);
+}
+
+class TalePreviewDescriptionRouteArgs {
+  const TalePreviewDescriptionRouteArgs({
+    this.key,
+    required this.talePreview,
+    required this.totalReads,
+  });
+
+  final Key? key;
+
+  final TalePreview talePreview;
+
+  final int totalReads;
+
+  @override
+  String toString() {
+    return 'TalePreviewDescriptionRouteArgs{key: $key, talePreview: $talePreview, totalReads: $totalReads}';
+  }
 }
 
 /// generated route for

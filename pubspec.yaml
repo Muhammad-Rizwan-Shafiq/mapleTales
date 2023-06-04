@@ -35,6 +35,7 @@ flutter:
   assets:
     - assets/translations/
     - assets/lorem-ipsum.txt
+    - services/talepreview-service/assets/
 
 
   fonts:

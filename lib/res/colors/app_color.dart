@@ -1,15 +1,23 @@
 
 
 import 'package:flutter/material.dart';
-
+import 'dart:math' as math;
 class AppColor {
 
   static const Color blackColor = Color(0xff000000) ;
   static const Color whiteColor = Color(0xffffffff) ;
+  static const Color primaryColor =  Colors.white;
 
-  static const Color primaryColor =  Color(0xff01B1C9);
 
-  static const Color primaryButtonColor =  Color(0xff01B1C9);
+
+  static const primaryButtonColor = LinearGradient(
+    colors: [Colors.orange, Colors.red],
+    begin: Alignment.centerLeft,
+    end: Alignment.centerRight,
+  );
+
+
+
   static const Color secondaryButtonColor =  Color(0xffFC3F5B);
 
   static const Color redColor = Colors.red;
